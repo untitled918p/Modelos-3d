@@ -1,34 +1,55 @@
 <!DOCTYPE html>
-<html lang html="es">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Untitled</title>
-<style>
-
-a{
-text-align: left;
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-text-decoration: none;
-}
-
-img{
-
-width: 200px;
-
-}
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Desplegable</title>
+  <style>
+    /* Estilos CSS para el botón y el menú */
+    .menu {
+      display: none; /* Oculta el menú por defecto */
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 12px 16px;
+      z-index: 1;
+    }
+    .boton {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 24px;
+      border: none;
+      cursor: pointer;
+    }
+    .boton:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
-<h1> Selecciona un juego<h1>
-<a href="UntitledBeta.html">Untitled Beta</a>
-<img src="icono.png" alt="Icono Juego 1"
-width="200">
-<a href="juego2.html">Proximo Juego</a>
 
-<p>Bienvenido a mi pagina Web</p>
+<!-- Botón que activa el menú -->
+<button class="boton" onclick="toggleMenu()">Mostrar Menú</button>
+
+<!-- Menú desplegable -->
+<div id="menu" class="menu">
+  <a href="#">Opción 1</a>
+  <a href="#">Opción 2</a>
+  <a href="#">Opción 3</a>
+</div>
+
+<script>
+  // Función para mostrar u ocultar el menú
+  function toggleMenu() {
+    var menu = document.getElementById("menu");
+    if (menu.style.display === "block") {
+      menu.style.display = "none"; // Si está visible, ocultarlo
+    } else {
+      menu.style.display = "block"; // Si está oculto, mostrarlo
+    }
+  }
+</script>
+
 </body>
 </html>
