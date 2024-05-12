@@ -36,14 +36,60 @@
             cursor: pointer; /* Cambiar el cursor al pasar sobre el texto */
             margin-left: 20px; /* Añadir espacio a la izquierda */
         }
+        .menu {
+            background-color: #6495ED; /* Azul */
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right; /* Alinear el menú a la derecha */
+            margin-top: 30px; /* Espacio entre el título y el menú */
+        }
+        .menu-items {
+            display: none;
+            background-color: #6495ED; /* Azul */
+            padding: 10px;
+            border-radius: 5px;
+            list-style-type: none;
+            margin: 0;
+        }
+        .menu:hover .menu-items {
+            display: block;
+        }
+        .menu-items li {
+            margin-bottom: 5px;
+        }
+        .menu-items li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 5px;
+        }
+        .menu-items li a:hover {
+            background-color: #4169E1; /* Azul oscuro */
+        }
     </style>
 </head>
 <body>
-    <div class="titulo" onclick="window.location.href = 'ruta-de-tu-archivo.html'">Modelos 3D</div>
-    <div class="contenedor-imagen" onclick="window.location.href = 'ruta-de-tu-archivo.html'">
-        <img class="imagen" src="VentanaIcono.png" alt="Ventana">
-        <div class="texto">Ventana Low Poly</div>
+    <div class="titulo">
+        <span class="titulo-texto">Modelos 3D</span>
+        <div class="menu">
+            Menú
+            <div class="menu-items">
+                <ul>
+                    <li><a href="#">Opción 1</a></li>
+                    <li><a href="#">Opción 2</a></li>
+                    <li><a href="#">Opción 3</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-    
+    <div class="contenedor-imagen">
+        <img class="imagen" src="VentanaIcono.png" alt="Ventana">
+        <div class="texto">Haz clic aquí para cargar otro HTML</div>
+    </div>
+    <div class="texto">
+        Ventana Low Poly
+    </div>
 </body>
 </html>
