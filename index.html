@@ -16,8 +16,13 @@
             text-align: center;
             padding: 20px;
             margin: 0;
-            font-size: 48px;
+            font-size: 0; /* Ocultar el texto */
             position: relative;
+        }
+        .titulo img {
+            width: 200px; /* Ancho de la imagen */
+            height: auto;
+            cursor: pointer;
         }
         .menu {
             position: absolute;
@@ -59,7 +64,7 @@
 </head>
 <body>
     <div class="titulo">
-        Modelos 3D
+        <img src="IconoMenu.png" alt="Modelos 3D">
         <div class="menu">
             Menú
             <ul class="menu-items">
