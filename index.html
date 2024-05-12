@@ -11,7 +11,6 @@
             font-family: Arial, sans-serif;
         }
         .titulo {
-            position: relative; /* Añadir posición relativa para el menú desplegable */
             background-color: #6495ED; /* Azul */
             color: white;
             text-align: center;
@@ -20,6 +19,25 @@
             font-size: 20px; /* Tamaño del título */
             cursor: pointer; /* Cambiar el cursor al pasar sobre el texto */
         }
+        .contenedor-imagen {
+            text-align: left; /* Alinear la imagen y el texto a la izquierda */
+            padding: 20px;
+        }
+        .imagen {
+            max-width: 50%; /* Ancho máximo de la imagen */
+            border: 5px solid black; /* Añadir borde negro */
+            border-radius: 10px;
+            cursor: pointer; /* Cambiar el cursor al pasar sobre la imagen */
+        }
+        .texto {
+            text-align: left; /* Alinear el texto a la izquierda */
+            font-size: 20px;
+            color: #333;
+            cursor: pointer; /* Cambiar el cursor al pasar sobre el texto */
+            margin-left: 20px; /* Añadir espacio a la izquierda */
+        
+        }
+        
         .menu-icon {
             position: absolute; /* Posición absoluta para el icono del menú */
             top: 50%; /* Alinear verticalmente en el medio */
@@ -76,12 +94,5 @@
     <div class="texto">
         Ventana Low Poly
     </div>
-
-    <script>
-        function toggleMenu() {
-            var menu = document.querySelector('.menu');
-            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-        }
-    </script>
 </body>
 </html>
