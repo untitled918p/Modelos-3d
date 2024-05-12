@@ -11,6 +11,7 @@
             font-family: Arial, sans-serif;
         }
         .titulo {
+            position: relative; /* Añadir posición relativa para el menú desplegable */
             background-color: #6495ED; /* Azul */
             color: white;
             text-align: center;
@@ -19,42 +20,24 @@
             font-size: 20px; /* Tamaño del título */
             cursor: pointer; /* Cambiar el cursor al pasar sobre el texto */
         }
-        .contenedor-imagen {
-            text-align: left; /* Alinear la imagen y el texto a la izquierda */
-            padding: 20px;
-        }
-        .imagen {
-            max-width: 50%; /* Ancho máximo de la imagen */
-            border: 5px solid black; /* Añadir borde negro */
-            border-radius: 10px;
-            cursor: pointer; /* Cambiar el cursor al pasar sobre la imagen */
-        }
-        .texto {
-            text-align: left; /* Alinear el texto a la izquierda */
-            font-size: 20px;
-            color: #333;
-            cursor: pointer; /* Cambiar el cursor al pasar sobre el texto */
-            margin-left: 20px; /* Añadir espacio a la izquierda */
+        .menu-icon {
+            position: absolute; /* Posición absoluta para el icono del menú */
+            top: 50%; /* Alinear verticalmente en el medio */
+            right: 20px; /* Alinear a la derecha con un espacio */
+            transform: translateY(-50%); /* Alinear verticalmente en el medio */
+            cursor: pointer; /* Cambiar el cursor al pasar sobre el icono */
         }
         .menu {
+            display: none;
+            position: absolute;
             background-color: #6495ED; /* Azul */
             color: white;
             padding: 10px;
             border-radius: 5px;
-            cursor: pointer;
-            float: right; /* Alinear el menú a la derecha */
-            margin-top: 30px; /* Espacio entre el título y el menú */
         }
         .menu-items {
-            display: none;
-            background-color: #6495ED; /* Azul */
-            padding: 10px;
-            border-radius: 5px;
             list-style-type: none;
             margin: 0;
-        }
-        .menu:hover .menu-items {
-            display: block;
         }
         .menu-items li {
             margin-bottom: 5px;
@@ -73,8 +56,10 @@
 <body>
     <div class="titulo">
         <span class="titulo-texto">Modelos 3D</span>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <img src="tu_imagen.png" alt="Menu">
+        </div>
         <div class="menu">
-            Menú
             <div class="menu-items">
                 <ul>
                     <li><a href="#">Opción 1</a></li>
@@ -91,5 +76,12 @@
     <div class="texto">
         Ventana Low Poly
     </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
 </body>
 </html>
