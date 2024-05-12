@@ -73,8 +73,9 @@
 <body>
     <div class="titulo">
         <span class="titulo-texto">Modelos 3D</span>
-        <img src="IconoMenu.png" alt="Modelos 3D">
-        <div class="menu">
+        <img src="IconoMenu.png" alt="Modelos 3D" onclick="mostrarOpciones()">
+        <div class="menu" onclick="mostrarOpciones()">
+            Menú
             <ul class="menu-items">
                 <li><a href="#">Opción 1</a></li>
                 <li><a href="#">Opción 2</a></li>
@@ -88,5 +89,15 @@
     <div class="texto">
         Ventana Low Poly
     </div>
+    <script>
+        function mostrarOpciones() {
+            var menuItems = document.querySelector('.menu-items');
+            if (menuItems.style.display === 'none' || menuItems.style.display === '') {
+                menuItems.style.display = 'block';
+            } else {
+                menuItems.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
